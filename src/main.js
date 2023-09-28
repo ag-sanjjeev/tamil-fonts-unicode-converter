@@ -289,6 +289,7 @@ const fontRespectiveUnicode = {
 		"கா":"fh",
 		"க்":"f;",
 		"க":"f",
+		",": ">",
 		"ஔ":"xs",
 		"ஓ":"X",
 		"ஒ":"x",
@@ -300,8 +301,7 @@ const fontRespectiveUnicode = {
 		"ஈ":"<",
 		"இ":",",
 		"ஆ":"M",
-		"அ":"m",
-		",": ">"
+		"அ":"m"
 	},
 	"suntommy" : {
 		"ஸ்ரீ":"=",
@@ -591,6 +591,7 @@ const fontRespectiveUnicode = {
 		"கா":"fh",
 		"க்":"f;",
 		"க":"f",
+		",": ">",
 		"ஔ":"xs",
 		"ஓ":"X",
 		"ஒ":"x",
@@ -602,8 +603,7 @@ const fontRespectiveUnicode = {
 		"ஈ":"<",
 		"இ":",",
 		"ஆ":"M",
-		"அ":"m",
-		",": ">"
+		"அ":"m"
 	}
 };
 
@@ -648,7 +648,7 @@ function convertFontUnicode(form) {
 function unicodeToFont(font, text) {		
 	
 	// Getting html decoded text
-    text = htmlDecode(text);
+    //text = htmlDecode(text);
 
     // Loop that iterate through all available letters
 	for(var i in fontRespectiveUnicode[font]) { 
@@ -680,7 +680,7 @@ function unicodeToFont(font, text) {
 function fontToUnicode(font, text) {
 	
 	// Getting html decoded text
-  	text = htmlDecode(text);
+  	//text = htmlDecode(text);
   	
   	// Loop that iterate through all available letters
 	for(var i in fontRespectiveUnicode[font]) { 	
