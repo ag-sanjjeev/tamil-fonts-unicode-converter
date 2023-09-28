@@ -6,7 +6,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<title>Tamil Font to Unicode Convertor</title>
+	<title>Tamil Font to Unicode Converter</title>
 
 	<!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="./thirdparty/bootstrap/bootstrap.css" media="all" />
@@ -15,6 +15,123 @@
 </head>
 <body>
 
+	<div class="container-fluid font-converter">
+		
+		<div class="row">
+			
+			<div class="col py-2">
+				
+				<form class="card rounded shadow p-0" action="#" method="post" onsubmit="return convertFontUnicode(this.form);">
+					
+					<div class="card-header bg-primary">
+						<h3 class="card-title text-center text-white py-2">தமிழ் எழுத்துரு ஒருங்குறிமம் மாற்றி</h3>
+					</div>
+
+					<div class="card-body">
+						
+						<div class="form-group mb-3">
+							<label for="tamilFont" class="form-label">தமிழ் எழுத்துரு</label>
+							<select class="form-control" name="tamilFont" id="tamilFont">
+								
+								<option value="bamini">Bamini (பாமினி)</option>
+								<option value="suntommy">Suntommy (சன்டாமி)</option>
+
+							</select>
+						</div>
+
+						<div class="row">
+							
+							<div class="col-md-4">
+								<div class="form-group mb-3">		
+									<div class="form-check form-switch">
+										<input type="checkbox" name="conversionType" id="conversionType" class="form-check-input">
+										<label for="conversionType" class="form-check-label">எழுத்துருவிற்கு மாற்றுக</label>
+										<!-- <label for="conversionType" class="form-check-label">ஒருங்குறிமத்திற்கு மாற்றுக</label> -->
+									</div>
+
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group mb-3">				
+									<div class="form-check form-switch">
+										<input type="checkbox" name="startConversionByInput" id="startConversionByInput" class="form-check-input">
+										<label for="startConversionByInput" class="form-check-label">எழுத்துக்களை உள்ளிட்டவுடன் மாற்றுக</label>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group mb-3">				
+									<div class="form-check form-switch">
+										<input type="checkbox" name="copyConversion" id="copyConversion" class="form-check-input">
+										<label for="copyConversion" class="form-check-label">மாற்றம் செய்தவுடன் நகல் செய்க</label>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+						<hr />
+
+						<div class="row">
+							
+							<div class="col-md-6">
+								
+								<div class="form-group mb-3">
+									
+									<label for="inputText" class="form-label">உள்ளீடு எழுத்துக்கள்</label>
+									<textarea class="form-control" name="inputText" id="inputText" rows="10" placeholder="மாற்றக்கூடிய எழுத்துக்களை உள்ளிடுக"></textarea>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-6">
+								
+								<div class="form-group mb-3">
+									
+									<label for="inputText" class="form-label">வெளியீடு எழுத்துக்கள்</label>
+									<textarea class="form-control" name="inputText" id="inputText" rows="10" placeholder="மாற்றப்பட்ட எழுத்துக்களை பெறுக"></textarea>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="form-group mb-3 text-center">
+							<button type="submit" class="btn btn-success">மாற்றுக</button>
+						</div>
+
+					</div>
+
+					<div class="card-footer">
+						
+						<div class="d-flex flex-wrap">
+							
+							<div class="badge pill rounded bg-primary m-2">
+								மொத்த எழுத்துக்கள் <span id="totalLettersCount">05</span>
+							</div>
+
+							<div class="badge pill rounded bg-primary m-2">
+								மொத்த சொற்கள் <span id="totalWordsCount">05</span>
+							</div>
+
+						</div>
+
+					</div>
+
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
 
 	<!-- Scripts -->
 	<script type="text/javascript" src="./thirdparty/scripts/jquery-3.6.0.min.js"></script>
