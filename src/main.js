@@ -144,7 +144,7 @@ const fontRespectiveUnicode = {
 		"ரீ":"uP",
 		"ரி":"up",
 		"ரா":"uh",
-		"ர்":["u;","H"],
+		"ர்":["u;","H", "h;"],
 		"ர":"u",
 		"யௌ":"nas",
 		"யோ":"Nah",
@@ -289,7 +289,6 @@ const fontRespectiveUnicode = {
 		"கா":"fh",
 		"க்":"f;",
 		"க":"f",
-		",": ">",
 		"ஔ":"xs",
 		"ஓ":"X",
 		"ஒ":"x",
@@ -301,7 +300,8 @@ const fontRespectiveUnicode = {
 		"ஈ":"<",
 		"இ":",",
 		"ஆ":"M",
-		"அ":"m"
+		"அ":"m",
+		",": ">"
 	},
 	"suntommy" : {
 		"ஸ்ரீ":"=",
@@ -446,7 +446,7 @@ const fontRespectiveUnicode = {
 		"ரீ":"uP",
 		"ரி":"up",
 		"ரா":"uh",
-		"ர்":["u;","H"],
+		"ர்":["u;","H", "h;"],
 		"ர":"u",
 		"யௌ":"nas",
 		"யோ":"Nah",
@@ -590,8 +590,7 @@ const fontRespectiveUnicode = {
 		"கி":"fp",
 		"கா":"fh",
 		"க்":"f;",
-		"க":"f",
-		",": ">",
+		"க":"f",		
 		"ஔ":"xs",
 		"ஓ":"X",
 		"ஒ":"x",
@@ -603,7 +602,8 @@ const fontRespectiveUnicode = {
 		"ஈ":"<",
 		"இ":",",
 		"ஆ":"M",
-		"அ":"m"
+		"அ":"m",
+		",": ">"
 	}
 };
 
@@ -646,9 +646,6 @@ function convertFontUnicode(form) {
 
 // Function that converts font to unicode text
 function unicodeToFont(font, text) {		
-	
-	// Getting html decoded text
-    //text = htmlDecode(text);
 
     // Loop that iterate through all available letters
 	for(var i in fontRespectiveUnicode[font]) { 
@@ -669,19 +666,13 @@ function unicodeToFont(font, text) {
 			}
 		}
 	}	
-  	
-  	// Getting html decoded text
-  	text = htmlDecode(text);
 
   	// Returning result
 	return text;
 }
 
 function fontToUnicode(font, text) {
-	
-	// Getting html decoded text
-  	//text = htmlDecode(text);
-  	
+		
   	// Loop that iterate through all available letters
 	for(var i in fontRespectiveUnicode[font]) { 	
 	
@@ -702,9 +693,6 @@ function fontToUnicode(font, text) {
 			}
 		}
 	}  	
-	
-	// Getting html decoded text
-  	text = htmlDecode(text);
 
   	// Returning result
 	return text;	
